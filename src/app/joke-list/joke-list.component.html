@@ -1,1 +1,15 @@
-<app-joke></app-joke>
+<div *ngFor="let joke of jokes">
+  <!--<app-joke></app-joke>-->
+
+  <div class="card" style="width: 100%;">
+    <div class="card-body">
+      <h5 class="card-title">{{joke.setup}}</h5>
+
+      <p class="card-text"
+         [hidden]="joke.hide">{{joke.punchline}}</p>
+      <button class="btn btn-primary" (click)="joke.toggle()">{{joke.buttonText}}</button>
+    </div>
+  </div>
+
+</div>
+
