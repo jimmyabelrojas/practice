@@ -1,6 +1,4 @@
-<div *ngFor="let joke of jokes">
-  <!--<app-joke></app-joke>-->
-
+<!--<div *ngFor="let joke of jokes">
   <div class="card" style="width: 100%;">
     <div class="card-body">
       <h5 class="card-title">{{joke.setup}}</h5>
@@ -11,5 +9,11 @@
     </div>
   </div>
 
-</div>
+</div>-->
 
+<app-joke-form></app-joke-form>
+<app-joke
+  *ngFor="let j of jokes"
+  [joke]="j"
+>
+</app-joke>
