@@ -20,4 +20,8 @@ export class JokeListComponent implements OnInit {
   ngOnInit() {
   }
 
+  addJoke(joke: Joke) {
+    console.log('addJoke', Joke);
+    this.jokes.unshift(joke);
+  }
 }
