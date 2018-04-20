@@ -24,4 +24,10 @@ export class JokeListComponent implements OnInit {
     console.log('addJoke', Joke);
     this.jokes.unshift(joke);
   }
+  deleteJoke(joke: Joke) {
+    const indexToDelete = this.jokes.indexOf(joke);
+    if (indexToDelete !== -1) {
+      this.jokes.splice(indexToDelete, 1);
+    }
+  }
 }

@@ -12,6 +12,19 @@
 
     <p class="card-text"
        [hidden]="joke.hide">{{joke.punchline}}</p>
-    <button class="btn btn-primary" (click)="joke.toggle()">{{joke.buttonText}}</button>
+
+    <!--<div class="btn-toolbar" role="toolbar" aria-label="Show/hide and delete buttons">-->
+    <div class="btn-group" role="group" aria-label="Show Answer">
+      <button class="btn btn-primary" (click)="joke.toggle()">{{joke.buttonText}}</button>
+    </div>
+
+    <div class="btn-group" role="group" aria-label="Delete joke">
+      <button
+        class="btn btn-primary"
+        (click) = "deleteJoke()"
+      >Delete
+      </button>
+    </div>
+    <!--</div>-->
   </div>
 </div>
